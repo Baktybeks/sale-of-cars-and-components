@@ -1,0 +1,49 @@
+.header {
+    padding: 25px 0;
+    border-bottom: 1px solid #E5E5E5;;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.logo img {
+    vertical-align: bottom;
+}
+
+.menu {
+    margin-left: 244px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu_item {
+    margin-right: 70px;
+    cursor: pointer;
+}
+
+.menu_item a {
+    font-size: 15px;
+    color: #030305;
+    text-decoration: none;
+}
+
+.menu_item a:hover {
+    border-bottom: 2px solid black;
+}
+
+.btn_nav {
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.login {
+    color: blue;
+}

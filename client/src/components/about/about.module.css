@@ -1,0 +1,57 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.main {
+    background-image: url("../../assets/images/background.png");
+    background-position: center;
+    background-size: cover;
+    padding: 104px 0 154px;
+}
+
+.main_info {
+    max-width: 855px;
+}
+
+.main_title {
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 88px;
+    color: #030305;
+    margin-bottom: 40px;
+}
+
+.main_text {
+    font-size: 16px;
+    line-height: 21px;
+    color: #030305;
+    margin-bottom: 40px;
+    max-width: 502px;
+}
+
+.button {
+    padding: 20px;
+    width: 334px;
+    height: 64px;
+    background: #030305;
+    border: 0;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    transition: background-color .5s;
+}
+
+.button:hover:not(:disabled) {
+    cursor: pointer;
+    background: #575757;
+}
+.button:disabled {
+    cursor: not-allowed;
+    color: gray;
+    background-color: #343434;
+}

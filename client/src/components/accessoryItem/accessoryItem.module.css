@@ -1,0 +1,56 @@
+
+.car_item {
+    max-width: 384px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.car_item_image:hover img {
+    transform: scale(1.1);
+}
+.car_item_image img {
+    width: 384px;
+    height: 247px;
+    object-fit: cover;
+    vertical-align: bottom;
+    transition: all .3s;
+}
+
+.car_item_title {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 36px;
+    letter-spacing: 0.02em;
+    color: #030305;
+    padding: 15px 0 17px;
+}
+
+.car_item_info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.car_item_point {
+    width: 110px;
+    height: 92px;
+    gap: 15px;
+}
+
+.car_item_point img {
+    margin-bottom: 11px;
+}
+
+.car_item_action {
+    margin-top: 13px;
+}
+
+.car_item_action .button {
+    width: 100%;
+    height: 54px;
+    padding: 15px;
+}
+
+.car_item_point > div:nth-child(2) {
+    font-weight: bold;
+}

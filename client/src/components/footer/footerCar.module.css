@@ -1,0 +1,26 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 25px 0;
+}
+
+.footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.rights {
+    font-size: 15px;
+    line-height: 18px;
+    text-align: right;
+    color: #030305;
+}
+
+.logo img {
+    vertical-align: bottom;
+}

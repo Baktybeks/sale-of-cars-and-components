@@ -18,6 +18,9 @@ function KnowPrice() {
         e.preventDefault()
         if (isFormValid()) {
             dispatch(addApplicationApi(name, phone, car))
+            setName('')
+            setPhone('')
+            setCar('')
         } else {
             alert('Введите все данные')
         }
@@ -56,9 +59,9 @@ function KnowPrice() {
                         onChange={e => setCar(e.target.value)}
                         placeholder="Автомобиль, который вас интересует"/>
                     <button
-                        className={classes.button}
+                        className={classes.button_send}
                         type="submit">
-                        <span>Узнать цену</span>
+                        <span>Узнать цену и характеристику</span>
                     </button>
                 </form>
                 <img src={rolls} alt="Rolls" className={classes.price_image}/>

@@ -38,7 +38,7 @@ export const addUserCarApi = (carId, userId) => {
         try {
             const data = await $api.post('api/user_car/', {carId, userId})
             if (data.status === 200) {
-                alert('Вы успешно добавили')
+                alert('Вы успешно добавили в кабинет')
                 // dispatch(setModalActive(false))
             }
         } catch (e) {
@@ -52,7 +52,7 @@ export const addUserAccessoryApi = (accessoryId, userId) => {
         try {
             const data = await $api.post('api/user_accessory/', {accessoryId, userId})
             if (data.status === 200) {
-                alert('Вы успешно добавили')
+                alert('Вы успешно добавили в кабинет')
                 // dispatch(setModalActive(false))
             }
         } catch (e) {

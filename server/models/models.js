@@ -42,6 +42,26 @@ const Application = sequelize.define('application', {
     car: {type: DataTypes.STRING, allowNull: false},
 })
 
+const AccessoryOrder = sequelize.define('accessory_order', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+})
+
+const CarOrder = sequelize.define('car_order', {
+    id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
+})
+
+User.hasMany(CarOrder)
+CarOrder.belongsTo(User)
+
+Car.hasMany(CarOrder)
+CarOrder.belongsTo(Car)
+
+User.hasMany(AccessoryOrder)
+AccessoryOrder.belongsTo(User)
+
+Accessory.hasMany(AccessoryOrder)
+AccessoryOrder.belongsTo(Accessory)
+
 User.hasMany(UserCar)
 UserCar.belongsTo(User)
 
@@ -55,7 +75,7 @@ Accessory.hasMany(UserAccessory)
 UserAccessory.belongsTo(Accessory)
 
 module.exports = {
-    Car, User, Accessory, UserCar, UserAccessory, Application
+    Car, User, Accessory, UserCar, UserAccessory, Application, AccessoryOrder, CarOrder
 }
 
 

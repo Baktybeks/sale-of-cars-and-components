@@ -27,12 +27,12 @@ function CarItem( {car} ) {
                 <div className={classes.car_item_point}>
                     <img src={wheel} alt="wheel"/>
                     <div>Двигатель</div>
-                    <div>{car.engine} л.с.</div>
+                    <div>{car.wheel} л.с.</div>
                 </div>
                 <div className={classes.car_item_point}>
                     <img src={belt} alt="belt"/>
                     <div>Кол-во мест</div>
-                    <div>{car.places}</div>
+                    <div>{car.belt}</div>
                 </div>
             </div>
             <div className={classes.car_item_action}>

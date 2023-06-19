@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux"
 import {useNavigate, useParams} from "react-router-dom"
 import classes from "./carPage.module.css"
 import {addUserCarApi, getCarApi} from "../../axios/carsApi"
+import {addCarOrderApi} from "../../axios/orderApi"
 
 function CarPage() {
 
@@ -18,6 +19,13 @@ function CarPage() {
     const addUserCar = () => {
         if (user.id) {
             dispatch(addUserCarApi(car.id, user.id))
+        } else {
+            alert("Авторизуйтесь")
+        }
+    }
+    const addCarOrder = () => {
+        if (user.id) {
+            dispatch(addCarOrderApi(car.id, user.id))
         } else {
             alert("Авторизуйтесь")
         }
@@ -70,10 +78,16 @@ function CarPage() {
                             <div className={classes.card__divider}>
                                 <div className={classes.card__divider_line}></div>
                             </div>
-                            <button
-                                className={classes.subtitle}
-                                onClick={addUserCar}>Добавить в кабинет
-                            </button>
+                            <div className={classes.btn_add}>
+                                <button
+                                    className={classes.button_send}
+                                    onClick={addUserCar}>Добавить в кабинет
+                                </button>
+                                <button
+                                    className={classes.button_send}
+                                    onClick={addCarOrder}>заказать
+                                </button>
+                            </div>
                         </>
             }
         </div>

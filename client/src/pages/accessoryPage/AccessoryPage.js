@@ -3,6 +3,7 @@ import {useDispatch, useSelector} from "react-redux"
 import {useNavigate, useParams} from "react-router-dom"
 import {addUserAccessoryApi, getAccessoryApi,} from "../../axios/carsApi"
 import classes from "./accessoryPage.module.css"
+import {addAccessoryOrderApi} from "../../axios/orderApi"
 
 
 function AccessoryPage() {
@@ -19,6 +20,14 @@ function AccessoryPage() {
     const addUserAccessory = () => {
         if (user.id) {
             dispatch(addUserAccessoryApi(accessory.id, user.id))
+        } else {
+            alert("Авторизуйтесь")
+        }
+    }
+
+    const addAccessoryOrder = () => {
+        if (user.id) {
+            dispatch(addAccessoryOrderApi(accessory.id, user.id))
         } else {
             alert("Авторизуйтесь")
         }
@@ -51,7 +60,9 @@ function AccessoryPage() {
                                         <div className={classes.card__content_top_title}>{accessory.title} </div>
                                         <div className={classes.card__content_top_box}>
                                             <div className={classes.title}>Информация:</div>
-                                            <div className={classes.subtitle}>Описание: <span>{accessory.description}</span></div>
+                                            <div
+                                                className={classes.subtitle}>Описание: <span>{accessory.description}</span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -59,10 +70,16 @@ function AccessoryPage() {
                             <div className={classes.card__divider}>
                                 <div className={classes.card__divider_line}></div>
                             </div>
-                            <button
-                                className={classes.btn_acc}
-                                onClick={addUserAccessory}>Добавить в кабинет
-                            </button>
+                            <div className={classes.btn_add}>
+                                <button
+                                    className={classes.button_send}
+                                    onClick={addUserAccessory}>Добавить в кабинет
+                                </button>
+                                <button
+                                    className={classes.button_send}
+                                    onClick={addAccessoryOrder}>заказать
+                                </button>
+                            </div>
                         </>
             }
         </div>

@@ -8,7 +8,7 @@ export const addApplicationApi = (name, phone, car ) => {
         try {
             const data = await $api.post('api/application/', {name, phone, car})
             if (data.status === 200) {
-                alert('Вы успешно добавили')
+                alert('Спасибо за обрещение мы с вами свяжемся')
             }
         } catch (e) {
             alert(e)

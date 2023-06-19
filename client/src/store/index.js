@@ -5,6 +5,7 @@ import carsReducer from './slices/carsSlice'
 import errorReducer from './slices/errorSlice'
 import accessoryReducer from './slices/accessorySlice'
 import applicationReducer from './slices/applicationSlice'
+import orderReducer from './slices/orderSlice'
 
 
 export const store = configureStore({
@@ -15,5 +16,6 @@ export const store = configureStore({
         carsReducer,
         accessoryReducer,
         applicationReducer,
+        orderReducer,
     }
 })

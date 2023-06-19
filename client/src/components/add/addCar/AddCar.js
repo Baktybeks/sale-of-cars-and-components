@@ -31,7 +31,7 @@ function AddCar() {
         formData.append('gear', gear)
         formData.append('wheel', wheel)
         formData.append('belt', belt)
-        formData.append('price', belt)
+        formData.append('price', price)
         formData.append('image', image)
         dispatch(addCarApi(formData))
     }
